@@ -6,7 +6,7 @@
 import pygame 
 class Button:
     # constructor function
-    def __init__(self, text, x, y, w, h, bg_color=(),text_col=(),hover_col=(),border_r=0):
+    def __init__(self, text, x, y, w, h, bg_color=(102, 44, 57),text_col=(255,255,255),hover_col=(153,96,110),border_r=0):
         self.rect=pygame.Rect(x,y,w,h)
         self.text=text
         self.bg_color=bg_color
@@ -14,7 +14,7 @@ class Button:
         self.hover_col=hover_col
         self.text_col=text_col
         self.border_r=border_r
-        self.font=pygame.font.Font(None,36)
+        self.font=pygame.font.Font(None,30)
     def update(self):
         mouse_pos=pygame.mouse.get_pos()
         if self.rect.collidepoint(mouse_pos):
