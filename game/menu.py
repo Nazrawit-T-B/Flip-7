@@ -2,6 +2,7 @@
 import pygame, sys
 from pygame.locals import*
 from UI.button import Button
+from game.howto import howto
 def menu(display,clock):
     options=[2,3,4,5,6]
     selectedPlayers=2
@@ -20,8 +21,12 @@ def menu(display,clock):
                 selectedPlayers+=1
             if subBtn.isClicked(event) and selectedPlayers > min(options):
                 selectedPlayers-=1
-        display.fill((255,197,211))
-        title = pygame.font.SysFont("Fredoka", 30, bold=True).render("Select Number of Players", False, (255, 255, 255))
+            if continueBtn.isClicked(event):
+                result=howto(display,clock)
+                if result=="menu":
+                    continue
+        display.fill((253,235,239))
+        title = pygame.font.SysFont("Fredoka", 30, bold=True).render("Select Number of Players", False, (102, 44, 57))
         display.blit(title, title.get_rect(center=(display.get_width() // 2, 250)))
         pygame.draw.rect(display,(153,96,110),playerAmountCard,border_radius=5)
         addBtn.update()
