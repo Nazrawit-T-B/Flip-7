@@ -6,7 +6,7 @@
 import pygame 
 class Button:
     # constructor function
-    def __init__(self, text, x, y, w, h, bg_color=(102, 44, 57),text_col=(255,255,255),hover_col=(153,96,110),border_r=0):
+    def __init__(self, text, x, y, w, h, bg_color=(102, 44, 57),text_col=(255,255,255),hover_col=(153,96,110),border_r=0,font_size=30):
         self.rect=pygame.Rect(x,y,w,h)
         self.text=text
         self.bg_color=bg_color
