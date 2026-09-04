@@ -2,6 +2,7 @@ import pygame,sys
 from pygame.locals import *
 from game.menu import menu
 from game.howto import howto
+
 pygame.init()
 def main():
     display=pygame.display.set_mode((800,800))
