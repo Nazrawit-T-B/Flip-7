@@ -2,7 +2,6 @@ import pygame, sys
 from pygame.locals import *
 from UI.button import Button
 from UI.label import * 
-from game.game import game
 def howto2(display, clock):
 
     header = pygame.font.SysFont("Fredoka", 30, bold=True)
@@ -57,7 +56,7 @@ def howto2(display, clock):
                 pygame.quit()
                 sys.exit()
             if playgameBtn.isClicked(event):
-                result=game(display,clock)
+                return "game"
             elif menuBtn.isClicked(event):
                 return "menu"
         display.fill((253,235,239))

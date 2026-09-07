@@ -50,7 +50,7 @@ def howto(display, clock):
             elif menuBtn.isClicked(event):
                         return "menu"
             elif playgameBtn.isClicked(event):
-                        result=game(display,clock) 
+                        return "game"
         display.fill((253,235,239))
        
         title = header.render("How to Play", True, text_color)
