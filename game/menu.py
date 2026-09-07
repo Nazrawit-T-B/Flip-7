@@ -25,6 +25,8 @@ def menu(display,clock):
                 result=howto(display,clock)
                 if result=="menu":
                     continue
+                elif result=="game":
+                    return selectedPlayers
         display.fill((253,235,239))
         title = pygame.font.SysFont("Fredoka", 30, bold=True).render("Select Number of Players", False, (102, 44, 57))
         display.blit(title, title.get_rect(center=(display.get_width() // 2, 250)))
