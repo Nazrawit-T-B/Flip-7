@@ -6,7 +6,7 @@ from game.game import game
 pygame.init()
 
 def main():
-    display = pygame.display.set_mode((800, 800))
+    display = pygame.display.set_mode((1000, 800))
     pygame.display.set_caption('Flip 7')
     clock = pygame.time.Clock()
     status = "menu"
